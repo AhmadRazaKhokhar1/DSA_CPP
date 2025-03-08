@@ -19,7 +19,7 @@ This repository contains well-structured implementations of various DSA topics, 
 ## 🚀 How to Use This Repository  
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/ahmadrazakhokhar/dsa-with-cpp.git
-   cd dsa-with-cpp
+   git clone https://github.com/ahmadrazakhokhar/dsa-with-cpp.git](https://github.com/AhmadRazaKhokhar1/DSA_CPP.git
+   cd DSA_CPP
 
 Support Ahmad Raza Khokhar to make more useful projects/courses.
