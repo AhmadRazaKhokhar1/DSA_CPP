@@ -47,5 +47,29 @@ int main()
     {
         cout << "Please enter a valid letter!\n";
     }
+
+    /*
+    Ternary Operators:
+    This is another way of implementing if and else-if conditional statements.
+    In this example we will check wether the given input is a postive or a negative
+    ineteger.
+    NOTE: characters (a-z or A-Z) will also be considered in the condition as per ASCII
+    We discussed before.
+    */
+    int number;
+    cout << "Please enter a positive or negative number:\n";
+    cin >> number;
+    if (number < 0)
+    {
+        cout << "The given number is negative integer\n";
+    }
+    else if (number >= 0)
+    {
+        cout << "The given number is a positive integer\n";
+    }
+    else
+    {
+        cout << "Please enter a valid integer value!\n";
+    }
     return 0;
 }
