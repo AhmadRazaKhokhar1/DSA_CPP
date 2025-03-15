@@ -105,5 +105,79 @@ In this chapter we will understand the use-case of loops in C++
         }
     } while (_z <= _n1);
 
+    // Prime Numbers
+    /*
+    Prime numbers are those which are only divisible by themselves or by 1.
+    The rest numbers are called Non-Prime numbers.
+    */
+    bool isPrime = true;
+    int _val = 7;
+    for (int i = 2; i <= (_val - 1); i++)
+    {
+        if (_val % i == 0)
+        {
+            isPrime = false;
+            break; // as soon as the isPrime gets false, we can use break here to save extra itreations
+        }
+    };
+    isPrime ? (cout << _val << " is a prime number\n") : (cout << _val << " is a non-prime number\n");
+
+    /*
+    The above approach to identify a prime number was quite awesome but we can go one step ahead
+    in terms of optimization to save time complexity for the loop. In the above example, we did
+    everything right to tell whether the number is prime or not by checking the condition of
+    i <= n -1 which means that we are ignoring first and the last integer because they are always
+    returning 0 in n % i meaning if both of these are skipped and still the result is zero, it means
+    that the given number is not a prime number, this approach is good but there is a more optimized way
+    of acheiving this.
+
+    If check an example of finding the non-prime numbers
+
+    Let us say, n = 12.
+    Now the factors will be as follows:
+
+    1 x 12 = 12;
+    2 x 6 = 12;
+    3 x 4 = 12;
+    4 x 3 = 12;
+    6 x 2 = 12;
+    12 x 1 = 12;
+
+    we know that the factors from left and right side of 'x' are repeating at some point. like 1 x 12 and 12 x 1 since
+    we are focused to find the falsy of the prime number, so we are ignoring the first and last n and n-1 values from the
+    condition which means that 1 x 12 and 12 x 1 are ignored. Now keep in mind that wherever the factors are repeating
+    just after, it means that is not a prime number too. If we see above, 3 x 4 and 4 x 3 are the points where the values
+    are repeating on left and right as factors. so we can simple run the loop until that particular condition is met.
+    Now the main point, how check whether the factors are repeating or not? Well since we have ignore the first and last
+    values already which were repeating, it means that half the way of factors, if any of factors repeat, we have met the
+    condition more quickly and saved some time.
+    So in order to get the repeating factors like in this case 3 and 4, we have square root of the n which is 12 in this case
+    if look closely sqrt of 12 is 3.4641  if we apply i <= sqrt of 12; then loop will surely stop at the repeating point of the
+    value i becaues 3.4641 is <= 3 and 4. The loop will definitely stop its iterations when i == 3;
+
+    If we further break it down.
+    We kow that i <= sqrt of n is a non-prime number
+
+    we can also say that square of i and square of (sqrt of n), which will be equal to
+    square of i = n;
+
+    So lets dive into the actual implementation of this hope that you've understood till here.
+    */
+
+    int numberFromUser;
+    cout << "Please enter a number\n";
+    cin >> numberFromUser;
+    bool _isPrime = true;
+    for (int j = 2; (j * j) <= numberFromUser; j++)
+    {
+        if (numberFromUser % j == 0)
+        {
+            cout << "exited the loop where j = " << j << endl;
+            _isPrime = false;
+            break; // exit the as the divisor has been found.
+        }
+    };
+    _isPrime ? (cout << numberFromUser << " is a prime number from user\n") : (cout << numberFromUser << " is a non-prime number from user\n");
+
     return 0;
 }
