@@ -22,4 +22,14 @@ This repository contains well-structured implementations of various DSA topics, 
    git clone https://github.com/AhmadRazaKhokhar1/DSA_CPP.git
    cd DSA_CPP
 
+## How to run the code?
+You may start the project in each chapter by the following command in your terminal!
+if on macOS:
+```
+g++ ./path_to_your_file.cpp && ./a.out
+```
+if on windows:
+```
+g++ my_program.cpp && a.exe
+```
 Support Ahmad Raza Khokhar to make more useful projects/courses.

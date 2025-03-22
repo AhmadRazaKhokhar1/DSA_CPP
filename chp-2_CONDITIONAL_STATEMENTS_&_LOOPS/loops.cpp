@@ -16,13 +16,13 @@ In this chapter we will understand the use-case of loops in C++
     the given confition is true, the loop executes the given commands within its block scope.
     An finally the third argument is for updating the loop variable after each iteration.
     */
-    int arr[5] = {1, 2, 3, 4, 5}; // This is a static array declaration with a size of 5 elements;
+    int arr[5] = {1, 2, 3, 4, 5}; // This is a static array declaration with a size of 5 elements; this is created in stack
     for (int i = 0; i < 5; i++)
     {
         cout << "for loop number is: " << arr[i] << "\n";
     };
 
-    string *arr2 = new string[3]; // This is a dynamic array and following are their values with respect to their indexes.
+    string *arr2 = new string[3]; // This is a dynamic array and following are their values with respect to their indexes. this is created in heap. new keyword initiates heap
     arr2[0] = "and I love coding\n";
     arr2[1] = "I am a software engineer\n";
     arr2[2] = "Hi my name is Ahmad Raza Khokhar\n";
