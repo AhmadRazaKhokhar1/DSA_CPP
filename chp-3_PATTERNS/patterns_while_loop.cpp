@@ -75,12 +75,23 @@ int main()
     cout << "3. triangle or pyramid of *: \n\n";
     while (i3 <= n3)
     {
-       int j=1;
-       while(j<=i)
-       {
-        cout << "*";
-        j++;
-       }
+     int k = n3;
+        while (k >= 1)
+        {
+           if(k<i3){
+            cout << "*";
+           }else{
+            cout << " ";
+           }
+            k--;
+        }
+        int j = 1;
+        while (j <= i3)
+        {
+           
+           cout << "*";
+            j++;
+        }
         cout << endl;
         i3++;
     }
@@ -105,5 +116,6 @@ int main()
         cout << endl;
         i4++;
     }
+     cout << endl;
     return 0;
 }
