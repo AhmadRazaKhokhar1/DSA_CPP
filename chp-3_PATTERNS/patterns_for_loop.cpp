@@ -123,5 +123,50 @@ int main()
       }
       cout << "\n";
    }
+   cout << endl;
+
+   cout << "6. diamond pattern:\n\n";
+
+   // declarations
+   int diamondCount = 6;
+   int odd_num = 1;
+   int a = diamondCount / 2;
+   int halfRound = diamondCount / 2;
+
+   // first half
+   for (int k = 1; k <= halfRound; k++)
+   {
+      for (int j = 1; j <= a; j++)
+      {
+         cout << " ";
+      }
+      for (int z = 1; z <= odd_num; z++)
+      {
+         cout << "*";
+      }
+      cout << "\n";
+
+      a -= 1;
+      odd_num += 2;
+   }
+
+   // second half
+   for (int k = 1; k <= halfRound + 1; k++)
+   {
+      for (int j = 1; j <= a; j++)
+      {
+         cout << " ";
+      }
+      for (int z = 1; z <= odd_num; z++)
+      {
+         cout << "*";
+      }
+      cout << "\n";
+
+      a += 1;
+      odd_num -= 2;
+   }
+   cout << endl;
+
    return 0;
 }
